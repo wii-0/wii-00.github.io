@@ -1,0 +1,747 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.header {
+    text-align: center;
+    background: url('g12.webp') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.biografia {
+    display: flex;
+    justify-content: center; /* Centra la caja dentro de la sección */
+    padding: 40px;
+    background-color:  #1a1a1a; /* Color de fondo suave para la sección */
+}
+
+.caja {
+    display: flex;
+    align-items: flex-start; /* Alinea el contenido al inicio verticalmente */
+    background-color:  white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limita el ancho máximo para mejor legibilidad */
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px #fff;
+}
+
+.caja img {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    margin-right: 20px;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
+}
+
+.texto {
+    display: flex;
+    flex-direction: column; /* Asegura que h3 esté encima de p */
+    justify-content: center;
+}
+
+.texto h3 {
+    font-size: 28px;
+    color: #2c3e50; /* Color oscuro para el título */
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif; /* Fuente elegante para el título */
+}
+
+.texto p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif; /* Fuente legible para el párrafo */
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    .caja {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caja img {
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .texto h3 {
+        text-align: center;
+    }
+
+    .texto p {
+        text-align: center;
+    }
+}
+/**
+.caja {
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja h3 {
+    
+position: absolute;
+margin: 20px 800px;
+font-size: 28px;
+color: white;
+}
+
+.caja p {
+    position: absolute;
+    margin: 150px 800px;
+    font-size: 28px;
+    color: red;
+    }
+
+.caja img {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}**/
+
+.linea-tiempo {
+    position: relative;
+    margin: 20px 0;
+}
+
+.eventos {
+    border-left: 3px solid #f0ad4e;
+}
+
+.evento {
+    padding: 20px;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.evento:hover {
+    box-shadow: 0 0 20px rgba(240, 173, 78, 0.8);
+    transform: scale(1.02);
+}
+
+.premios , .legado {
+    display: flex;
+    justify-content: center; /* Centra la caja dentro de la sección */
+    padding: 40px;
+    background-color:  #1a1a1a; /* Color de fondo suave para la sección */
+}
+
+.leg,
+.pre {
+    display: flex;
+    align-items: flex-start; /* Alinea el contenido al inicio verticalmente */
+    background-color:  white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limita el ancho máximo para mejor legibilidad */
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pre:hover , .leg:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px #fff;
+}
+
+.pre img , .leg img{
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    margin-right: 20px;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
+}
+
+.pre .texto , .leg .texto{
+    display: flex;
+    flex-direction: column; /* Asegura que h3 esté encima de p */
+    justify-content: center;
+}
+
+.pre .texto h3 , .leg .texto h3{
+    font-size: 28px;
+    color: #2c3e50; /* Color oscuro para el título */
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif; /* Fuente elegante para el título */
+}
+
+.pre .texto p , .leg .texto p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif; /* Fuente legible para el párrafo */
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    .pre ,.leg {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pre img , .leg img {
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .pre .texto h3 , .pre .texto h3{
+        text-align: center;
+    }
+
+    .pre .texto p , .pre .texto p {
+        text-align: center;
+    }
+}
+
+
+.galeria {
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    gap: 20px; /* Añade espacio entre los elementos */
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 100px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria .g1, .galeria .g2, .galeria .g3 {
+    width: calc(33% - 40px); /* Ajusta el ancho para que tres divs puedan caber en una fila */
+    background-color: #181818;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*.galeria .g1, .g2 ,.g3 {
+    justify-content: space-between;
+    width: 40%;
+    align-items: center;
+    background-color: #181818 ;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 100px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}*/
+
+.galeria-imagenes img {
+    width: 80%;
+    margin: 38px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-imagenes img:hover {
+    transform: scale(1.1);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.citas {
+    background: linear-gradient(135deg, #34495e, #2c3e50); /* Fondo degradado elegante */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    margin: 20px 0;
+    text-align: center; /* Centra todo el contenido */
+    position: relative;
+    overflow: hidden; /* Oculta contenido fuera del borde */
+}
+
+.citas::before {
+    content: '“'; /* Comilla decorativa */
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: -30px;
+    left: 20px;
+}
+
+.citas h3 {
+    font-size: 32px;
+    color: #ecf0f1;
+    font-family: 'Georgia', serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.citas p {
+    font-size: 1.8em;
+    color: #f8f9fa;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Sombra más intensa para hacer que el texto resalte */
+    font-style: italic; /* Hace que el texto se vea más estilizado */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto; /* Centra el texto en la pantalla */
+    position: relative;
+}
+
+.citas p::before, .citas p::after {
+    content: '“'; /* Añadir comillas decorativas */
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 0;
+}
+
+.citas p::after {
+    content: '”'; /* Cierre de comillas */
+    right: 0;
+}
+
+.citas p::before {
+    left: 0;
+}
+
+.citas:hover {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Efecto de cambio de color al pasar el ratón */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); /* Sombra más intensa en hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .citas {
+        padding: 20px;
+    }
+
+    .citas::before {
+        font-size: 100px;
+        top: -20px;
+        left: 10px;
+    }
+
+    .citas h3 {
+        font-size: 24px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+
+    .citas p {
+        font-size: 1.4em;
+        line-height: 1.4;
+        padding: 0 10px;
+    }
+
+    .citas p::before, .citas p::after {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .citas {
+        padding: 15px;
+    }
+
+    .citas::before {
+        font-size: 80px;
+        top: -15px;
+        left: 5px;
+    }
+
+    .citas h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .citas p {
+        font-size: 1.2em;
+        padding: 0 5px;
+    }
+
+    .citas p::before, .citas p::after {
+        font-size: 1.2em;
+    }
+}
+
+
+/**
+.container1 {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    width: 250px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.book-img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .book-img {
+    transform: scale(1.1);
+}
+
+.info {
+    margin-top: 20px;
+}
+
+.info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 14px;
+    color: #999;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sizes, .colors {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.sizes span, .colors span {
+    padding: 5px;
+    margin: 0 5px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sizes span:hover, .colors span:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.buy-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.buy-btn:hover {
+    background-color: #0056b3;
+}
+
+.hidden-info {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover .hidden-info {
+    display: block;
+}**/ 
+
+/* Contenedor */
+/* Contenedor */
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Tarjeta */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    width: 250px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra regular */
+    margin: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.7); /* Sombra blanca al hacer hover */
+}
+
+.book-img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .book-img {
+    transform: scale(1.1);
+}
+
+.info {
+    margin-top: 20px;
+}
+
+.info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 14px;
+    color: #999;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Tamaños y colores */
+.sizes, .colors {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.sizes span, .colors span {
+    padding: 5px;
+    margin: 0 5px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sizes span:hover, .colors span:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Botón Comprar */
+.buy-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.buy-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Mensaje oculto (ajustado para que ocupe el tamaño de la imagen) */
+.hidden-info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Asegura que se ajuste a la altura de la imagen */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1px;
+    border-radius: 10px;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    height: 100%; /* Coincidir con el contenedor de la imagen */
+}
+
+.card:hover .hidden-info {
+    display: block;
+    height: 100%; /* Ocupa el tamaño completo del contenedor de la imagen */
+    pointer-events: none;
+}
+
+/* Estilo para móviles */
+@media (max-width: 768px) {
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+/**/
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2em;
+    color: #ecf0f1;
+}
+
+/* Contenedor de la Línea del Tiempo */
+.timeline-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Línea del Tiempo */
+.timeline {
+    display: flex;
+    animation: scroll 30s linear infinite;
+}
+
+.timeline-item {
+    flex: 0 0 auto;
+    width: 250px;
+    margin-right: 30px;
+    position: relative;
+    text-align: center;
+}
+
+
+.timeline-item:last-child {
+    margin-right: 0;
+}
+
+.timeline-content {
+    background: #34495e;
+    padding: 20px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timeline-content h2 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #ecf0f1;
+}
+
+.timeline-content p {
+    font-size: 0.9em;
+    color: #bdc3c7;
+}
+
+/* Efecto de Sombra al Pasar el Cursor */
+.timeline-content:hover {
+    box-shadow: 0 4px 15px  rgba(240, 173, 78, 0.8);
+}
+
+/* Línea de la Línea del Tiempo */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    width: 10000px;
+    background:  rgba(240, 173, 78, 0.8);/**/
+    z-index: -1;
+}
+
+/* Animación de Desplazamiento */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.timeline {
+    animation-play-state: running;
+}
+
+/* Pausar la Animación al Pasar el Cursor o Tocar en Dispositivos Móviles */
+.timeline-container:hover .timeline,
+.timeline-container.paused .timeline {
+    animation-play-state: paused;
+}
+
+/* Responsive Design: Mantener Disposición Horizontal en Todos los Dispositivos */
+@media (max-width: 768px) {
+    /* Eliminamos la disposición vertical */
+    /* No se necesita cambiar la flex-direction */
+    
+    /* Ajustamos el tamaño de los items si es necesario */
+    .timeline-item {
+        width: 200px;
+        margin-right: 15px;
+    }
+
+    .timeline-content {
+        height: auto;
+    }
+
+    .timeline::before {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+    }
+}
